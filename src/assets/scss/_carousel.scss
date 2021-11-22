@@ -1,0 +1,146 @@
+@import '../../assets/scss/variables';
+
+.carousel__banner{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+
+    &--wrapper{
+        width: 100%;
+        display: flex;
+        cursor: pointer;
+        overflow: hidden;
+
+    }
+
+    &--img{
+        width: 100%;
+        border-bottom: 4px solid $c-primary;  
+        transform: translateX(0);
+        transition: transform .5s ease-in-out;
+    }
+}
+
+.carousel{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    position: relative;
+
+    &__btn{
+        position: absolute;
+        cursor: pointer;
+        img{
+            width: 2rem;
+        }
+
+        &--left{
+            top: 50%;
+            left: 0;
+            z-index: 100;
+        }
+
+        &--right{
+            top: 50%;
+            right: 0;
+            z-index: 100;
+        }
+    }
+
+    &__slide{
+        width: 80%;
+        box-shadow: 0 3px 6px #00000029;
+        border-radius: 2px;
+        padding: 2rem;
+        min-height: 25vw;
+        margin: 1rem 0;
+
+        &--wrapper{
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform .2s ease-in-out;
+            position: relative;
+        }
+
+        &--header{
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            h4{
+                font-size: 1.3rem;
+                font-weight: 600;
+                margin-right: 5rem;
+            }
+        }
+
+        &--text{
+            color: #ff7e1a;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        &--box{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: .5rem;
+            margin: 2rem 0;
+        }
+
+        &--other{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        &--img{
+            width: 100%;
+            min-height: 10rem;
+            background-color: #f2f2f2;
+            padding: 1rem;
+
+            img{
+                width: 1rem;
+            }
+        }
+
+        &--sub{
+            width: 100%;
+            background-color: grey;
+            margin-bottom: .5rem;
+            border-radius: 6px;
+            color: #fff;
+            font-size: .8rem;
+            padding: .3rem;
+        }
+    }
+}
+
+@media(max-width: 1200px){
+    .carousel{
+    
+        &__slide{
+    
+            &--header{
+    
+                h4{
+                    margin: 0;
+                    width: 80%;
+                    font-size: .8rem;
+                }
+            }
+    
+            &--box{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}

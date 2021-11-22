@@ -1,0 +1,87 @@
+@import '../../assets/scss/variables';
+
+.card{
+    height: 20rem;
+    box-shadow: 0 3px 6px #00000029;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+
+    &__container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__icon{
+        max-height: 3rem;
+        margin-bottom: 1.3rem;
+    }
+
+    &__title, &__text{
+        color: $c-text;
+    }
+
+    &__text{
+        width: 90%;
+        font-size: .9rem;
+        text-align: center;
+        line-height: 1.5;
+        margin-bottom: 1.3rem;
+    }
+
+    &__title{
+        font-weight: 600;
+        margin-bottom: 1.3rem;
+    }
+
+    &__footer{
+        width: 100%;
+        padding: .7rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(90deg, rgba(255,144,64,1) 0%, rgba(234,105,20,1) 100%);
+        position: absolute;
+        bottom: -1rem;
+        border-radius: 0 0 2px 2px;
+
+        &--text, &--link{
+            color: #fff;
+        }
+
+        &--text{
+            font-size: 1.1rem;
+        }
+
+        &--link{
+            font-weight: 500;
+        }
+    }
+}
+
+@media(max-width: 1200px){
+    .card{
+        height: 25rem;
+
+        &__container{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media(max-width: 480px){
+    .card{
+        height: 20rem;
+
+        &__container{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

@@ -1,0 +1,128 @@
+@import '../../assets/scss/variables';
+
+.categories{
+
+    &__container{
+        width: 100%;
+        list-style-type: none; 
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    &__item{
+        width: calc(100% / 10);
+        height: 7vw;
+        background-color: #f9f9f9;
+        border-top: 2px solid #eaeaea;
+        border-bottom: 2px solid #eaeaea;
+        border-right: 2px solid #eaeaea;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+        
+        &:hover{
+            box-shadow: 0 3px 6px #00000029;
+            transition: all .2s ease-in-out;
+        }
+
+        &:first-child{
+            border-left: 2px solid #eaeaea;
+            border-radius: 6px 0 0 6px;
+        }
+
+        &:last-child{
+            border-radius: 0 6px 6px 0;
+        }
+
+        &--active{
+            background-color: $c-primary;
+            color: #fff;
+            border-radius: 6px;
+            border-left: 2px solid $c-primary!important;
+            border: 2px solid $c-primary;
+            box-shadow: 0 3px 6px #00000029;
+            transition: all .2s ease-in-out;
+        
+            .categories__icon, .categories__title{
+                color: #fff;
+            }
+
+            .categories__icon{
+                display: none;
+            }
+
+            .categories__icon--active{
+                display: block;
+            }
+        }
+
+    }
+
+    &__icon, &__icon--active{
+        max-height: 2rem;
+        margin-bottom: .6rem;
+        // color: $c-text;
+    }
+
+    &__icon{
+        display: block;
+    }
+
+    &__icon--active{
+        display: none;
+    }
+
+    &__title{
+        font-size: .9rem;
+        color: $c-text;
+    }
+}
+
+
+@media(max-width: 1200px){
+    .categories{
+        &__container{
+            max-width: 100%;
+            overflow: auto;
+            &::-webkit-scrollbar{
+                width: 0;
+                height: 0;
+            }
+        }
+
+        &__item{
+            min-width: calc(100% / 5);
+            height: 10vw;
+        }
+
+        &__icon{
+            max-height: 1.2rem;
+        }
+    }
+}
+
+@media(max-width: 480px){
+    .categories{
+        &__container{
+            max-width: 100%;
+            overflow: auto;
+
+            &::-webkit-scrollbar{
+                width: 0;
+                height: 0;
+            }
+        }
+
+        &__item{
+            min-width: calc(100% / 2);
+            height: 25vw;
+            font-size: .7rem;
+        }
+    }
+}

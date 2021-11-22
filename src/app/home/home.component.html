@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="banner__container">
+        <!-- <img src="./assets/images/others/banner-1-1.png" alt=""> -->
+        <app-carousel></app-carousel>
+    </div>
+    <div class="wrapper">
+        <ul class="categories__container">
+            <li class="categories__item" [class.categories__item--active]="catActive == 'Todos'" (click)="filterCat('Todos')">
+                <img class="categories__icon--active" src="./assets/images/icons/icon-globe-white.svg" alt="icone globo">
+                <img class="categories__icon" src="./assets/images/icons/icon-globe.svg" alt="icone globo">
+                <div class="categories__title">Todos</div>
+            </li>
+            <li class="categories__item" [class.categories__item--active]="catActive == 'Profissional'" (click)="filterCat('Profissional')">
+                <img class="categories__icon--active" src="./assets/images/icons/icon-case-white.svg" alt="icone mala">
+                <img class="categories__icon" src="./assets/images/icons/icon-case.svg" alt="icone mala">
+                <div class="categories__title">Profissional</div>
+            </li>
+            <li class="categories__item" [class.categories__item--active]="catActive == 'Reguladores'"  (click)="filterCat('Reguladores')">
+                <img class="categories__icon--active" src="./assets/images/icons/icon-bank-white.svg" alt="icone banco">
+                <img class="categories__icon" src="./assets/images/icons/icon-bank.svg" alt="icone banco">
+                <div class="categories__title">Reguladores</div>
+            </li>
+            <li class="categories__item categories__item--active" [class.categories__item--active]="catActive == 'Sócio Ambiental'"  (click)="filterCat('Sócio Ambiental')">
+                <img class="categories__icon--active" src="./assets/images/icons/icon-tree-white.svg" alt="icone árvore">
+                <img class="categories__icon" src="./assets/images/icons/icon-tree.svg" alt="icone árvore">
+                <div class="categories__title">Sócio Ambiental</div>
+            </li>
+            <li class="categories__item" [class.categories__item--active]="catActive == 'Jurídico'"  (click)="filterCat('Jurídico')">
+                <img class="categories__icon--active" src="./assets/images/icons/icon-hammer-white.svg" alt="icone martelo">
+                <img class="categories__icon" src="./assets/images/icons/icon-hammer.svg" alt="icone martelo">
+                <div class="categories__title">Jurídico</div>
+            </li>
+            <li class="categories__item" [class.categories__item--active]="catActive == 'Listas Restritivas'"  (click)="filterCat('Listas Restritivas')">
+                <img class="categories__icon--active" src="./assets/images/icons/icon-stop-white.svg" alt="icone restrito">
+                <img class="categories__icon" src="./assets/images/icons/icon-stop.svg" alt="icone restrito">
+                <div class="categories__title">Listas Restritivas</div>
+            </li>
+            <li class="categories__item" [class.categories__item--active]="catActive == 'Mídia / Internet'"  (click)="filterCat('Mídia / Internet')">
+                <img class="categories__icon--active" src="./assets/images/icons/icon-globe-map-white.svg" alt="icone globo">
+                <img class="categories__icon" src="./assets/images/icons/icon-globe-map.svg" alt="icone globo">
+                <div class="categories__title">Mídia / Internet</div>
+            </li>
+            <li class="categories__item" [class.categories__item--active]="catActive == 'Bens e Imóveis'"  (click)="filterCat('Bens e Imóveis')">
+                <img class="categories__icon--active" src="./assets/images/icons/icon-diamond-white.svg" alt="icone jóia">
+                <img class="categories__icon" src="./assets/images/icons/icon-diamond.svg" alt="icone jóia">
+                <div class="categories__title">Bens e Imóveis</div>
+            </li>
+            <li class="categories__item" [class.categories__item--active]="catActive == 'Cadastro'"  (click)="filterCat('Cadastro')">
+                <img class="categories__icon--active" src="./assets/images/icons/icon-avatar-white.svg" alt="icone avatar">
+                <img class="categories__icon" src="./assets/images/icons/icon-avatar.svg" alt="icone avatar">
+                <div class="categories__title">Cadastro</div>
+            </li>
+            <li class="categories__item" [class.categories__item--active]="catActive == 'Financeiro'"  (click)="filterCat('Financeiro')">
+                <img class="categories__icon--active" src="./assets/images/icons/icon-money-white.svg" alt="icone cofre">
+                <img class="categories__icon" src="./assets/images/icons/icon-money.svg" alt="icone cofre">
+                <div class="categories__title">Financeiro</div>
+            </li>
+        </ul>
+
+        <div class="select__wrapper">
+            <label class="select__label">ORDENAR</label>
+            <select name="" id="" class="select__field" [(ngModel)]="selectValue" (change)="selectOrd()">
+                <option value="lancamento" >Lançamento</option>
+                <option value="preco">Preço</option>
+            </select>
+        </div>
+
+        <!-- cards -->
+        <div class="card__container">
+            <div class="card" *ngFor="let card of tempCards">
+                <img class="card__icon" src="./assets/images/icons/icon-{{card.icon}}-primary.svg" alt="">
+                <div class="card__title">{{card.categoria}}</div>
+                <div class="card__text">{{card.texto}}</div>
+                <div class="card__footer">
+                    <div class="card__footer--text">R$ {{card.preco}}</div>
+                    <a class="card__footer--link" (click)="openCard(card)">Saiba mais</a>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>

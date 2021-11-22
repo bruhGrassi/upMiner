@@ -1,0 +1,152 @@
+<div class="container">
+    <div class="banner__container">
+        <app-carousel></app-carousel>
+    </div>
+    <div class="wrapper">
+        <h2 class="title"><img src="./assets/images/icons/icon-back.svg" alt=""> Histórico Empresarial</h2>
+       
+        <div class="carousel" id="carousel">
+            <div class="carousel__slide--wrapper" id="slide-1">
+                <button class="carousel__btn carousel__btn--left" (click)="slidePrev(1)"><img src="./assets/images/icons/arrow_left_icon.svg" alt=""></button>
+                <div class="carousel__slide" >
+                    <div class="carousel__slide--header">
+                        <div class="icon"><img src="./assets/images/icons/calendar_icon.svg" alt=""></div>
+                        <h4>Linha do tempo 1</h4>
+    
+                        <div class="legend--wrapper d-flex align-center">
+                            <div class="legend">
+                                <div class="legend--icon"></div> 
+                                Lorem ipsum
+                            </div>
+                            <div class="legend">
+                                <div class="legend--icon"></div> 
+                                Lorem ipsum
+                            </div>               
+                        </div>
+                    </div>
+    
+                    <div class="timeline">
+                        <div class="timeline--info">Lorem</div>
+                        <div class="timeline--info">Lorem</div>
+                        <div class="timeline--info">Lorem</div>
+                        <div class="timeline--info">Lorem</div>
+                    </div>
+                    <div class="carousel__slide--box">
+                        <div class="carousel__slide--img">
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--other">
+                                <img src="./assets/images/icons/icon-{{card.icon}}.svg" alt=""> {{card.categoria}}
+                            </div>
+                        </div>
+                        <div class="carousel__slide--img">
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--other">
+                                <img src="./assets/images/icons/icon-{{card.icon}}.svg" alt=""> {{card.categoria}}
+                            </div>
+                        </div>
+                        <div class="carousel__slide--img">
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--other">
+                                <img src="./assets/images/icons/icon-{{card.icon}}.svg" alt=""> {{card.categoria}}
+                            </div>
+                        </div>
+                        <div class="carousel__slide--img">
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--other">
+                                <img src="./assets/images/icons/icon-{{card.icon}}.svg" alt=""> {{card.categoria}}
+                            </div>
+                        </div>
+                    </div>
+                    <p class="carousel__slide--text">{{card.texto}}</p>
+                </div>
+                <button class="carousel__btn carousel__btn--right" (click)="slideNext(1)"><img src="./assets/images/icons/right_arrow_icon.svg" alt=""></button>
+            </div>
+            <div class="carousel__slide--wrapper" id="slide-2">
+                <div class="carousel__slide" >
+                    <button class="carousel__btn carousel__btn--left"(click)="slidePrev(2)" ><img src="./assets/images/icons/arrow_left_icon.svg" alt=""></button>
+                    <div class="carousel__slide--header">
+                        <div class="icon"><img src="./assets/images/icons/calendar_icon.svg" alt=""></div>
+                        <h4>Linha do tempo 2</h4>
+    
+                        <div class="legend--wrapper d-flex align-center">
+                            <div class="legend">
+                                <div class="legend--icon"></div> 
+                                Lorem ipsum
+                            </div>
+                            <div class="legend">
+                                <div class="legend--icon"></div> 
+                                Lorem ipsum
+                            </div>               
+                        </div>
+                    </div>
+    
+                    <div class="timeline">
+                        <div class="timeline--info">Lorem</div>
+                        <div class="timeline--info">Lorem</div>
+                        <div class="timeline--info">Lorem</div>
+                        <div class="timeline--info">Lorem</div>
+                    </div>
+                    <div class="carousel__slide--box">
+                        <div class="carousel__slide--img">
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--other">
+                                <img src="./assets/images/icons/icon-{{card.icon}}.svg" alt=""> {{card.categoria}}
+                            </div>
+                        </div>
+                        <div class="carousel__slide--img">
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--other">
+                                <img src="./assets/images/icons/icon-{{card.icon}}.svg" alt=""> {{card.categoria}}
+                            </div>
+                        </div>
+                        <div class="carousel__slide--img">
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--other">
+                                <img src="./assets/images/icons/icon-{{card.icon}}.svg" alt=""> {{card.categoria}}
+                            </div>
+                        </div>
+                        <div class="carousel__slide--img">
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--sub">Lorem Ipsum</div>
+                            <div class="carousel__slide--other">
+                                <img src="./assets/images/icons/icon-{{card.icon}}.svg" alt=""> {{card.categoria}}
+                            </div>
+                        </div>
+                    </div>
+                    <p class="carousel__slide--text">{{card.texto}}</p>
+                </div>
+                <button class="carousel__btn carousel__btn--right" (click)="slideNext(2)"><img src="./assets/images/icons/right_arrow_icon.svg" alt=""></button>
+            </div>
+        </div>
+
+        <p class="text">O aplicativo Histórico Empresarial permite ao usuário ter acesso a todos os fatos e acontecimentos relevantes de uma empresa desde o seu ano de
+            fundação. Tenha acesso aos principais eventos corporativos de uma empresa, como: marcos jurídicos, mudança no quadro societário, aumento de
+            capital, reportagens e muito mais.
+        </p>
+
+        <p class="text">Após realizar a consulta, o histórico é salvo automaticamente, tornando as informações acessíveis ao usuário. A linha do tempo pode também ser
+            exportada no formato PDF.
+        </p>
+
+        <div class="d-flex align-center">
+            <div class="price">R$ <span>{{card.preco}}</span></div>
+            <button class="btn ml-md">Habilitar</button>
+        </div>
+    </div>
+
+</div>
