@@ -4,12 +4,12 @@
 - Node
 - Angular Cli
 ### Após clonar
-1.  
-# baixar as dependências com npm
+ 
+1.  # baixar as dependências com npm
 npm i
 
-2.
-# rodar 
+
+2. # rodar 
 ng serve --open
 
 ### Versões
